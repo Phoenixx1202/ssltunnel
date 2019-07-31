@@ -1,4 +1,4 @@
-
+#!/bin/bash
 inst_ssl () { 
 if netstat -nltp|grep 'stunnel4' 1>/dev/null 2>/dev/null;then
  [[ $(netstat -nltp|grep 'stunnel4'| wc -l) != '0' ]] && sslt=$(netstat -nplt |grep stunnel4 |awk {'print $4'} |awk -F ":" {'print $2'} |xargs) || sslt="\033[1;31mINDISPONIVEL"
