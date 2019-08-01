@@ -5,7 +5,7 @@ ram2=$(free -h | grep -i mem | awk {'print $4'})
 ram3=$(free -h | grep -i mem | awk {'print $3'})
 uso=$(top -bn1 | awk '/Cpu/ { cpu = "" 100 - $8 "%" }; END { print cpu }')
 system=$(cat /etc/issue.net)
-fun_bar () {
+{
 comando[0]="$1"
 comando[1]="$2"
  (
